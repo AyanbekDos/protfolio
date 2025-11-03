@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Аянбек Досумбаев — AI-консультант и разработчик</title>
+  <meta name="description" content="Аянбек Досумбаев — серийный предприниматель и AI-консультант. Быстро погружается в отрасль, строит AI-конвейеры и приносит измеримые результаты бизнесу.">
+  <style>
+    :root {
+      color-scheme: light;
+      --page-bg: #f3f5f9;
+      --surface: #ffffff;
+      --surface-soft: #f7f9fc;
+      --border: rgba(17, 24, 39, 0.08);
+      --shadow: 0 28px 54px rgba(15, 23, 42, 0.12);
+      --hero-bg-start: #0f172a;
+      --hero-bg-end: #1e293b;
+      --hero-text: #f8fafc;
+      --text: #1f2937;
+      --text-muted: #4b5563;
+      --accent: #3b82f6;
+      --accent-dark: #2563eb;
+      --accent-soft: rgba(59, 130, 246, 0.1);
+      --radius-lg: 26px;
+      font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--page-bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      padding: clamp(1.8rem, 5vw, 3.2rem) 1.3rem;
+    }
+
+    main {
+      width: min(1100px, 100%);
+      display: grid;
+      gap: clamp(1.8rem, 4vw, 2.6rem);
+    }
+
+    section {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.06);
+      padding: clamp(1.7rem, 3.6vw, 2.4rem);
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--hero-bg-start) 0%, var(--hero-bg-end) 70%);
+      color: var(--hero-text);
+      border: none;
+      box-shadow: var(--shadow);
+      padding: clamp(2rem, 4vw, 2.6rem);
+    }
+
+    .hero-inner {
+      position: relative;
+    }
+
+    .hero-photo {
+      float: right;
+      width: clamp(200px, 27vw, 260px);
+      margin-left: clamp(1rem, 4vw, 2.4rem);
+      margin-bottom: clamp(0.8rem, 2vw, 1.4rem);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 24px 44px rgba(15, 23, 42, 0.45);
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .hero-content {
+      display: grid;
+      gap: clamp(1rem, 2.4vw, 1.5rem);
+      max-width: 560px;
+    }
+
+    .badge {
+      justify-self: flex-start;
+      padding: 0.42rem 0.95rem;
+      border-radius: 999px;
+      background: rgba(59, 130, 246, 0.2);
+      color: var(--hero-text);
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      font-size: 0.86rem;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.05rem, 4.6vw, 3rem);
+      line-height: 1.08;
+    }
+
+    .hero p {
+      color: rgba(248, 250, 252, 0.85);
+      font-size: clamp(1rem, 2.1vw, 1.2rem);
+    }
+
+    .hero-facts {
+      display: grid;
+      gap: 0.7rem;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      color: rgba(248, 250, 252, 0.86);
+      font-size: 0.98rem;
+    }
+
+    .hero-facts li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.55rem;
+    }
+
+    .hero-facts svg {
+      flex-shrink: 0;
+      margin-top: 0.18rem;
+    }
+
+    .hero-note {
+      color: rgba(248, 250, 252, 0.7);
+      font-size: 0.95rem;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.85rem 1.9rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 90%);
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      box-shadow: 0 20px 42px rgba(37, 99, 235, 0.32);
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .hero-cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 26px 55px rgba(37, 99, 235, 0.38);
+    }
+
+    .hero-cta svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .section-title {
+      display: grid;
+      gap: 0.55rem;
+      margin-bottom: clamp(1.1rem, 2.3vw, 1.6rem);
+    }
+
+    .section-title h3 {
+      font-size: 0.9rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+    }
+
+    .section-title h2 {
+      font-size: clamp(1.55rem, 3vw, 1.9rem);
+      color: var(--text);
+    }
+
+    .section-title h2 a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .section-title h2 a:hover {
+      color: var(--accent-dark);
+      text-decoration: underline;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .metric-card {
+      background: var(--surface);
+      border-radius: 18px;
+      border: 1px solid rgba(37, 99, 235, 0.18);
+      padding: 1.4rem;
+      box-shadow: 0 16px 28px rgba(15, 23, 42, 0.08);
+      display: grid;
+      gap: 0.35rem;
+    }
+
+    .metric-card strong {
+      font-size: 1.85rem;
+      color: var(--accent);
+    }
+
+    .metric-card span {
+      color: var(--text-muted);
+      font-size: 0.96rem;
+    }
+
+    .case-media {
+      margin-top: 1.6rem;
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid rgba(17, 24, 39, 0.08);
+      box-shadow: 0 24px 46px rgba(15, 23, 42, 0.14);
+    }
+
+    .case-media img {
+      width: 100%;
+      display: block;
+    }
+
+    .cards {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .cards.cols-3 {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .card {
+      background: var(--surface);
+      border-radius: 18px;
+      border: 1px solid rgba(17, 24, 39, 0.08);
+      padding: 1.35rem;
+      line-height: 1.6;
+      box-shadow: 0 16px 32px rgba(15, 23, 42, 0.06);
+    }
+
+    .card strong {
+      display: block;
+      margin-bottom: 0.45rem;
+      font-size: 1.08rem;
+      color: var(--text);
+    }
+
+    .process-steps {
+      display: grid;
+      gap: 0.9rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .process-step {
+      background: var(--surface-soft);
+      border-radius: 18px;
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      padding: 1.35rem;
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .process-step span {
+      font-weight: 600;
+      color: var(--accent-dark);
+    }
+
+    .skills-list {
+      display: grid;
+      gap: 0.85rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      margin-top: 1.2rem;
+    }
+
+    .skills-list ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.45rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .info-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .info-card {
+      background: var(--surface);
+      border-radius: 18px;
+      border: 1px solid rgba(17, 24, 39, 0.08);
+      padding: 1.3rem 1.4rem;
+      box-shadow: 0 16px 28px rgba(15, 23, 42, 0.06);
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .info-card strong {
+      color: var(--text);
+    }
+
+    .list-plain {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.45rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .contact-section {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(37, 99, 235, 0.18));
+      border: 1px solid rgba(37, 99, 235, 0.22);
+    }
+
+    .contact-details {
+      display: grid;
+      gap: 0.75rem;
+      margin-top: 1.3rem;
+      font-size: 1rem;
+    }
+
+    .contact-details a {
+      color: var(--accent-dark);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .contact-details a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-section .hero-cta {
+      margin-top: 2rem;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      padding: 1.4rem 0 0.6rem;
+    }
+
+    @media (max-width: 960px) {
+      .hero {
+        padding: 2rem;
+      }
+
+      .hero-photo {
+        float: none;
+        margin: 0 auto 1.5rem;
+        width: min(240px, 65%);
+        display: block;
+      }
+
+      .hero-content {
+        max-width: none;
+        text-align: center;
+      }
+
+      .hero-facts li {
+        justify-content: center;
+      }
+
+      .hero-cta {
+        justify-self: center;
+      }
+    }
+
+    @media (max-width: 720px) {
+      body {
+        padding: 1.6rem 1rem;
+      }
+
+      section {
+        padding: 1.6rem;
+      }
+
+      .hero {
+        padding: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <figure class="hero-photo">
+          <img src="photo_2025-06-14_00-31-18.jpg" alt="Аянбек Досумбаев">
+        </figure>
+        <div class="hero-content">
+          <span class="badge">AI-конвейеры под ключ</span>
+          <h1>За 14 дней вникаю в вашу сферу и запускаю AI-автоматизацию, которая ускоряет бизнес</h1>
+          <p>
+            Быстро погружаюсь в процессы, собираю данные и выдаю работающий AI-прототип под вашу задачу — от промышленности до сервиса. Без узких ограничений, только фокус на результате.
+          </p>
+          <ul class="hero-facts">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              17 лет опыта в технологиях и операционном управлении: от e-commerce и медиа до промышленности и строительства.
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Увеличиваю эффективность процессов в 3–10 раз: мультиагентные боты берут на себя аналитику, закупки и коммуникации.
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Вовлекаю команды заказчика, обучаю и довожу до внедрения — работаю с клиентами по всему миру, готов к релокации и командировкам.
+            </li>
+          </ul>
+          <p class="hero-note">Доступен для проектной, частичной или полной занятости. Главный KPI — измеримый ROI от AI.</p>
+          <a class="hero-cta" href="https://t.me/aianback" target="_blank" rel="noreferrer">
+            Написать в Telegram
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M4 12H18M18 12L12 6M18 12L12 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <h3>Цифры</h3>
+        <h2>Проверено на реальных проектах</h2>
+      </div>
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <strong>≤14 дней</strong>
+          <span>от брифа до работающего AI-прототипа, который команда тестирует в бою</span>
+        </div>
+        <div class="metric-card">
+          <strong>3—10×</strong>
+          <span>рост скорости процессов после внедрения AI-ботов и конвейеров</span>
+        </div>
+        <div class="metric-card">
+          <strong>5+ отраслей</strong>
+          <span>промышленность, строительство, e-commerce, сервис, медиа — быстро вникаю и говорю на языке бизнеса</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <h3>Кейс недели</h3>
+        <h2><a href="https://smetai.online" target="_blank" rel="noreferrer">smetai.online</a> — AI для сметчиков</h2>
+      </div>
+      <p>
+        За две недели погрузился в сметное дело, обработал сотни документов и собрал AI-конвейер. Бот читает спецификации, строит календарный график, подсвечивает узкие места и выгружает отчёты для подрядчиков и инвесторов. Команда экономит 10+ часов на каждый объект и принимает решения по цифрам.
+      </p>
+      <figure class="case-media">
+        <img src="{B321A25D-E49E-4C07-AAA9-18CF0D30C4F3}.png" alt="Скриншот сервиса smetai.online">
+      </figure>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <h3>AI-продукты</h3>
+        <h2>Что уже работает у клиентов</h2>
+      </div>
+      <div class="cards cols-3">
+        <div class="card">
+          <strong>eventGREEN</strong>
+          Интеллектуальный бот для event-индустрии. Анализирует контакты, вытягивает даты мероприятий, рассылает персональные напоминания и удерживает клиентов без ручной CRM.
+        </div>
+        <div class="card">
+          <strong>SMET.ai</strong>
+          Специализированный ассистент для сметчиков металлоконструкций: распознаёт таблицы, считает сметы и находит лучшие цены у поставщиков. Экономия недель ручной работы.
+        </div>
+        <div class="card">
+          <strong>Herzog</strong>
+          Мультиагентная система планирования стройки. Четыре AI-агента декомпозируют сметы, строят диаграммы Ганта и оптимизируют календарь работ.
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <h3>Услуги</h3>
+        <h2>Фокусируюсь на задачах, которые приносят ROI</h2>
+      </div>
+      <div class="cards cols-3">
+        <div class="card">
+          <strong>AI-конвейеры под ключ</strong>
+          Проектирую и запускаю ботов, которые автоматизируют анализ документов, закупки, отчётность и коммуникации. Интегрирую в процессы без остановки бизнеса.
+        </div>
+        <div class="card">
+          <strong>Кастомные LLM</strong>
+          Дообучаю модели на ваших данных, подключаю CRM, базы знаний и регламенты. Бот отвечает в стиле компании и соблюдает политики безопасности.
+        </div>
+        <div class="card">
+          <strong>AI-стратегия и MVP</strong>
+          Считаем эффект, формируем дорожную карту, собираем MVP и проверяем гипотезы на реальных пользователях — до масштабирования.
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <h3>Лидерство и предпринимательство</h3>
+        <h2>Почему мне доверяют запуск сложных направлений</h2>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <strong>BRSYS — CEO</strong>
+          Руководил командой из разработчиков и маркетологов, выстраивал продуктовую стратегию и доставку решений для корпоративных клиентов.
+        </div>
+        <div class="card">
+          <strong>Qlixmed.kz — CEO</strong>
+          Собрал команду и запустил первый маркетплейс медоборудования в Казахстане. Вышли в Astana Hub, попали в топ-20 акселератора Startup Garage из 600 команд.
+        </div>
+        <div class="card">
+          <strong>BigBounce Media</strong>
+          Создал сеть из 5 000+ сайтов с аудиторией 100 000 посетителей в день, автоматизировал создание и SEO-продвижение.
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <h3>Как работаем</h3>
+        <h2>Процесс, который приводит к результату</h2>
+      </div>
+      <div class="process-steps">
+        <div class="process-step">
+          <span>01 — Погружение</span>
+          Получаю доступ к данным, разговариваю с экспертами, провожу экспресс-аудит. Через несколько дней есть карта задач и гипотеза AI-решения.
+        </div>
+        <div class="process-step">
+          <span>02 — Прототип + итерации</span>
+          Собираю AI-ядро, подключаю данные, показываю демо. Быстрые циклы «показали — уточнили — допилили» до достижения KPI.
+        </div>
+        <div class="process-step">
+          <span>03 — Внедрение и рост</span>
+          Документация, обучение команды, сопровождение релиза. Масштабируем функциональность, интегрируем новые источники данных.
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <h3>Навыки и стек</h3>
+        <h2>Что беру под ответственность</h2>
+      </div>
+      <div class="skills-list">
+        <div>
+          <strong>AI & Data</strong>
+          <ul>
+            <li>LLM-оркестрация, Retrieval-Augmented Generation</li>
+            <li>Компьютерное зрение, OCR, анализ чертежей и документов</li>
+            <li>Дообучение моделей на закрытых данных компании</li>
+          </ul>
+        </div>
+        <div>
+          <strong>Продукт и управление</strong>
+          <ul>
+            <li>AI discovery, расчёт ROI и unit-экономики</li>
+            <li>Построение AI-конвейеров и внедрение в процессы</li>
+            <li>Управление командами разработки, маркетинга и продаж</li>
+          </ul>
+        </div>
+        <div>
+          <strong>Технологии</strong>
+          <ul>
+            <li>Python, FastAPI, LangChain, OpenAI/Anthropic</li>
+            <li>Postgres, Vector DB, Supabase, Elastic</li>
+            <li>Azure, GCP, Kubernetes, CI/CD для AI-продуктов</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <h3>Образование и программы</h3>
+        <h2>Где прокачивал экспертизу</h2>
+      </div>
+      <div class="info-grid">
+        <div class="info-card">
+          <strong>Казахстанско-Американский свободный университет</strong>
+          <span>Информационные системы, 2027 (незавершённое высшее)</span>
+        </div>
+        <div class="info-card">
+          <strong>МЭСИ, Москва</strong>
+          <span>Антикризисное управление</span>
+        </div>
+        <div class="info-card">
+          <strong>Восточно-Казахстанский технический университет</strong>
+          <span>Архитектура</span>
+        </div>
+        <div class="info-card">
+          <strong>Astana Hub · Startup Garage</strong>
+          <span>Попал в топ-20 из 600 команд с проектом Qlixmed</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <h3>Глобальная готовность</h3>
+        <h2>Можно работать с вами из любой точки</h2>
+      </div>
+      <div class="info-grid">
+        <div class="info-card">
+          <strong>Локация</strong>
+          <span>Усть-Каменогорск, Казахстан. Готов к релокации и длительным командировкам.</span>
+        </div>
+        <div class="info-card">
+          <strong>Юридически</strong>
+          <span>Разрешения на работу: Казахстан, Россия, Беларусь, Германия, Кыргызстан, Украина, США, Узбекистан.</span>
+        </div>
+        <div class="info-card">
+          <strong>Языки</strong>
+          <ul class="list-plain">
+            <li>Русский — родной</li>
+            <li>Английский — B1 (свободно веду продуктовые обсуждения)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="section-title">
+        <h3>Связаться</h3>
+        <h2>Расскажите, что нужно ускорить — подберу решения</h2>
+      </div>
+      <p>
+        Напишите пару строк о вашем проекте. Предложу гипотезу, оценю эффекты и назначим демо — без лишних созвонов.
+      </p>
+      <div class="contact-details">
+        <div><strong>Почта:</strong> <a href="mailto:founder@smetai.online">founder@smetai.online</a></div>
+        <div><strong>Телефон:</strong> <a href="tel:+77051443862">8&nbsp;705&nbsp;144&nbsp;38&nbsp;62</a></div>
+        <div><strong>Telegram:</strong> <a href="https://t.me/aianback" target="_blank" rel="noreferrer">@aianback</a></div>
+      </div>
+      <a class="hero-cta" href="https://t.me/aianback" target="_blank" rel="noreferrer">
+        Написать в Telegram
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M4 12H18M18 12L12 6M18 12L12 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </section>
+
+    <footer>
+      © <script>document.write(new Date().getFullYear())</script> Аянбек Досумбаев. AI-консультант и разработчик.
+    </footer>
+  </main>
+</body>
+</html>
