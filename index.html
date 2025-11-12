@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Аянбек Досумбаев — AI-консультант и разработчик</title>
   <meta name="description" content="Аянбек Досумбаев — серийный предприниматель и AI-консультант. Быстро погружается в отрасль, строит AI-конвейеры и приносит измеримые результаты бизнесу.">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="favicon.png">
   <style>
     :root {
       color-scheme: light;
@@ -191,6 +193,88 @@
     .hero-cta svg {
       width: 18px;
       height: 18px;
+    }
+
+    .landing-section {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      box-shadow: 0 24px 44px rgba(15, 23, 42, 0.08);
+      padding: clamp(2rem, 3.4vw, 2.6rem);
+      display: grid;
+      gap: 1.6rem;
+    }
+
+    .landing-banner {
+      background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 70%);
+      border-radius: 26px;
+      padding: clamp(1.8rem, 3vw, 2.4rem);
+      color: #f8fafc;
+      display: grid;
+      gap: 0.9rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .landing-badge {
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(248, 250, 252, 0.7);
+    }
+
+    .landing-banner h2 {
+      font-size: clamp(1.9rem, 4vw, 2.5rem);
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    .landing-banner p {
+      color: rgba(248, 250, 252, 0.85);
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      margin: 0;
+    }
+
+    .landing-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .landing-step {
+      background: var(--surface-soft);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.2rem;
+      display: grid;
+      gap: 0.4rem;
+    }
+
+    .landing-step span {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--accent-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .landing-step strong {
+      font-size: 1.05rem;
+    }
+
+    .landing-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+      color: var(--accent-dark);
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .landing-cta svg {
+      width: 16px;
+      height: 16px;
     }
 
     .section-title {
@@ -385,6 +469,17 @@
       padding: 1.4rem 0 0.6rem;
     }
 
+    footer a {
+      color: var(--accent-dark);
+      font-weight: 600;
+      text-decoration: none;
+      margin-left: 0.6rem;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 960px) {
       .hero {
         padding: 2rem;
@@ -466,25 +561,37 @@
       </div>
     </section>
 
-    <section>
-      <div class="section-title">
-        <h3>Цифры</h3>
-        <h2>Проверено на реальных проектах</h2>
+    <section class="landing-section">
+      <div class="landing-banner">
+        <span class="landing-badge">30 минут — 30 000 ₸</span>
+        <h2>Продающие лендинги за 30 минут за 30 тысяч</h2>
+        <p>
+          Анализирую компанию клиента → вынимаю боли ЦА из интервью и аналитики → подключаю NLP, чтобы собрать оффер, структуру и тексты. Затем мгновенно сверяю всё с готовым UI-китом и выгружаю лендинг, который можно сразу лить в рекламу.
+        </p>
       </div>
-      <div class="metrics-grid">
-        <div class="metric-card">
-          <strong>≤14 дней</strong>
-          <span>от брифа до работающего AI-прототипа, который команда тестирует в бою</span>
+      <div class="landing-steps">
+        <div class="landing-step">
+          <span>01 · Разведка</span>
+          <strong>Экспресс-бриф + аудит конкурентов</strong>
+          Собираю факты о продукте, цифры, кейсы. Назначаю единственное УТП, чтобы лендинг не расползался.
         </div>
-        <div class="metric-card">
-          <strong>3—10×</strong>
-          <span>рост скорости процессов после внедрения AI-ботов и конвейеров</span>
+        <div class="landing-step">
+          <span>02 · NLP-ядро</span>
+          <strong>Генерирую офферы и блоки</strong>
+          Мои боты прогоняют инсайты через шаблоны и выдают тексты, которые реально бьют по боли аудитории.
         </div>
-        <div class="metric-card">
-          <strong>5+ отраслей</strong>
-          <span>промышленность, строительство, e-commerce, сервис, медиа — быстро вникаю и говорю на языке бизнеса</span>
+        <div class="landing-step">
+          <span>03 · Сборка</span>
+          <strong>Готовый лендинг через 30 минут</strong>
+          Использую библиотеку компонентов, проверяю мобильную версию, подключаю аналитику и пиксели.
         </div>
       </div>
+      <a class="landing-cta" href="https://t.me/aianback" target="_blank" rel="noreferrer">
+        Хочу лендинг за 30 минут
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M4 12H18M18 12L12 6M18 12L12 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
     </section>
 
     <section>
@@ -689,6 +796,7 @@
 
     <footer>
       © <script>document.write(new Date().getFullYear())</script> Аянбек Досумбаев. AI-консультант и разработчик.
+      <a href="privacy.html" rel="noreferrer">Политика конфиденциальности</a>
     </footer>
   </main>
 </body>
